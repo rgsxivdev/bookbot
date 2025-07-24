@@ -22,3 +22,12 @@ def count_char(text):
     for char in text:
         char_count[char.lower()] = char_count.get(char.lower(),0) + 1
     return char_count
+
+def sort_dictionary(dictionary):
+    dict_list = []
+    for key, value in dictionary.items():
+        if key.isalpha():
+            dict_list.append({"char":key,"num":value})
+       
+    sorted_list = sorted(dict_list, key=lambda x: x["num"], reverse=True)      
+    return sorted_list
